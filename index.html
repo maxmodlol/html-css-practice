@@ -18,15 +18,54 @@
 
 <link rel="stylesheet" href="css/csshome.css">
   <meta name="theme-color" content="#fafafa">
+  <script>
+    function myfun(x) {
+      x.classList.toggle("fa fa-close");
+    }
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+
+
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
 </head>
 
-<body style="font-family: Roboto;background-color: #f0f0f0;overflow-x: hidden">
-<nav class="nav">
 
-  <a href=""  style="padding-left: 50px;padding-right: 10px">
-    <img src="img/07406f4e6e8f83ea61c4571fcddf8893_icon.png" style="object-fit: cover;width: 60px;height: 100%;"></a>
-  <div  style="margin-top: -40px;margin-left: 125px">
- <i href=""> <b  style="font-size: 25px;font-family: 'Roboto';color:#fa9000;text-align: center;"> ALJAZEERA </b></i>
+
+<body>
+<div class="container">
+<nav class="main" id="nav">
+  <div class="logo" onclick="">
+  <a href=""  style="">
+    <img src="img/07406f4e6e8f83ea61c4571fcddf8893_icon.png" class="logo_img">
+  </a>
+  </div>
+
+  <div  class="nav_item">
+ <a href="" class="aljazer_logo">
+   <i style=";"> ALJAZEERA </i>
+ </a>
   <a href=""> News <i class="arrow"></i></a>
   <a href=""> Ukraine Crises</a>
   <a href=""> Features</a>
@@ -34,443 +73,504 @@
   <a href=""> Opinion</a>
   <a href=""> Video</a>
   <a href=""> More <i class="arrow"></i></a>
-  <a href=""><img src="img/live-streaming.png" style="width: 20px;margin-left: 150px"></a>
-  <a href=""> <img src="img/loupe.png"  style="width: 20px">
+  <a href=""><img src="img/live-streaming.png" style=""></a>
+  <a href=""> <img src="img/loupe.png"  style="">
+    </a>
+
+
+  </div>
+  <div class="liveicon">
+    <a>
+      <img src="img/live-streaming.png" class="liveicon--small">
     </a>
   </div>
+  <div class="ham_menu">
+    <a href="javascript:void(0);" class="ham_menu_icon" onclick="myFunction()">
+    <i class="fa fa-bars"  onclick="myfun(this)"></i>
+  </a>
+  </div>
+  <div class="mobile-container">
+      <div  class="PopUp_nav" id="myLinks">
+        <input class="mobile-container-search" type="text" placeholder="Search..">
+        <a href="#news">News</a>
+        <a href="#contact">Ukraine Crises</a>
+        <a href="#about">Feature</a>
+        <a href="#about">Economy</a>
+        <a href="#about">Opinion</a>
+        <a href="#about">Video</a>
+        <a href="#about">More</a>
 
+      </div>
+
+
+</div>
 </nav>
-<div style="width: 1360px ;height: 760px;overflow: hidden;padding: 20px">
-<section style="width: 1360px">
-  <div style="width: 500px;margin-left: 60px;margin-top:60px ;box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);">
-    <img src="img/tank.jpg" style="object-fit:fill;width:500px">
-    <div class="square" style=";width: 100px;height: 10px;margin-left: 20px;margin-top: -5px;"></div>
+<div class="header">
+    <div class="header_content">
+         <div class="header_img--big">
+            <img src="img/tank.jpg" >
+         </div>
+         <div class="square" ></div>
+         <div class="header_text--main">
+             <p class="live--red">
+                 <span class="dot"></span>
+                 LIVE UPDATES </p>
+             <h2> Ukrine to declare state of emergency as threat of war looms</h2>
+             <p class="text--gray" > After calling on citizines to leave Russia and imposing new sanctions ,Ukraine heads towards emergency rule</p>
+             <p class="text--bold"> Related Stories </p>
+             <p>Nord stream 2 ,What you should know about Russian's gas pipline to Europe Russian-Ukraine crises 5 things to know about Putin's hold move what sections have been imposed on Russia?</p>
+         </div>
+    </div>
+    <div class="header_right">
+         <div class="header_right--big">
+             <img src="img/000_323T6QE.jpg"  >
+
+         <div class="header_text">
+        <h2 style="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</h2>
+        <p style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+      </div>
+
+    </div>
+         <div class="splited_content">
+             <div class="content_small">
+
+                 <img src="img/putin.jpg"  >
+                    <div style="">
+                         <h2 style="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</h2>
+                          <p style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
+                    </div>
+
+             </div>
+             <div class="content_small">
+
+                  <img src="img/cover4.jpg"  >
+                <div>
+                <h2 style="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</h2>
+                <p style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
+                 </div>
+             </div>
+             <div class="content_small">
+
+                <img src="img/cover3.jpg"  >
+                 <div style="">
+                     <h2 style="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</h2>
+                     <p style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
+                 </div>
+
+             </div>
+             <div class="content_small">
+
+                  <img src="img/cover2.jpg"  >
+                 <div style="">
+                     <h2 style="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</h2>
+                    <p style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
+                 </div>
+
+             </div>
+             <div class="content_small">
+
+                 <img src="img/tank.jpg"  >
+                 <div style="">
+                    <h2 style="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</h2>
+                    <p style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
+                 </div>
+
+             </div>
+             <div class="content_small">
+
+               <img src="img/cover1.jpg"  >
+               <div style="">
+                    <h2 style="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</h2>
+                    <p style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
+               </div>
+
+             </div>
+
+         </div>
   </div>
-  <div style="float: left;width: 400px">
-    <div style=";margin-left: 50px">
-      <p style=";color: red;font-size: 14px;font-family: Arial;font-weight: 700"><span class="dot"></span>
-        LIVE UPDATES </p>
-      <div style="" ><h2> Ukrine to declare state of emergency as threat of war looms</h2></div>
-        <div><p style="font-size: 16px;color: gray" > After calling on citizines to leave Russia and imposing new sanctions ,Ukraine heads towards emergency rule</p>  </div>
-        <div><p style="font-weight: 700"> Related Stories </p>  </div>
-      <div style="font-family: Arial;font-size: 14px; "><p>Nord stream 2 ,What you should know about Russian's gas pipline to Europe
-      Russian-Ukraine crises 5 things to know about Putin's hold move what sections have been imposed on Russia?</p> </div>
 
-    </div>
+</div>
+<section class="large">
 
-  </div>
-  <div class="divright">
-    <div style="width: 600px; height: 150px; ">
-      <div style="width: 250px;height: 150px;">
-    <img src="img/000_323T6QE.jpg" style="height: 150px;width: 300px;" >
-      </div>
-      <div style=";float: right;margin-top: -160px;margin-left: 320px">
-        <p style="font-size: 16px;font-family: Arial;font-weight: 600;white-space: break-spaces">`Shared resentments ' but Russia  ties could be 'awkward 'for China</p>
-        <p style="font-size: 14px ;font-family: Roboto;color: gray;white-space: break-spaces"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
-      </div>
+        <img src="img/20220224_2_52306047_73986646.jpg" class="large_img">
+        <p class="large_p">Ukraine-Russia Crisses</p>
+        <div class="responsive" style="">
+                <div class="sliderdiv">
+                    <img src="img/cover4.jpg" class="imagesmall" >
+                    <p style=""> Rejection in the diplomacey of bitcoin its a fake new .</p>
+                </div>
+                <div class="sliderdiv">
+                    <img src="img/cover3.jpg" class="imagesmall" >
+                    <p style=""> Rejection in the diplomacey of bitcoin its a fake new .</p>
+                </div>
+                <div class="sliderdiv">
+                    <img src="img/cover2.jpg" class="imagesmall" >
+                    <p style=""> Rejection in the diplomacey of bitcoin its a fake new .</p>
+                </div>
 
-    </div>
-    <div style="display: flex ;width: 700px;margin: 5px ">
-      <div style="width: 350px; height: 150px; margin-top:20px;display: flex">
-        <div style="width: 150px;height: 140px;">
-          <img src="img/putin.jpg" style="height: 140px;width: 150px;" >
-        </div>
-        <div style=";float: right;margin-left: 10px;margin-top: -15px;padding-top: 1px;height: 150px">
-          <p style="font-size: 14px;font-family: Arial;font-weight: 600;">`Shared resentments ' but Russia  ties could be 'awkward 'for China</p>
-          <p style="font-size: 12px ;font-family: Roboto;color: gray;object-fit:cover;overflow: hidden"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
         </div>
 
-      </div>
 
-      <div style="width: 350px; height: 150px; margin-top:20px;display: flex">
-        <div style="width: 150px;height: 140px;">
-          <img src="img/cover1.jpg" style="height: 140px;width: 150px;" >
-        </div>
-        <div style=";float: right;margin-left: 10px;margin-top: -15px;padding-top: 1px;height: 150px">
-          <p style="font-size: 14px;font-family: Arial;font-weight: 600;">`Shared resentments ' but Russia  ties could be 'awkward 'for China</p>
-          <p style="font-size: 12px ;font-family: Roboto;color: gray;object-fit:cover;overflow: hidden"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
-        </div>
 
-      </div>
-    </div>
-    <div style="display: flex ;width: 700px;margin: 5px ">
-      <div style="width: 350px; height: 150px; margin-top:20px;display: flex">
-        <div style="width: 150px;height: 140px;">
-          <img src="img/cover2.jpg" style="height: 140px;width: 150px;" >
-        </div>
-        <div style=";float: right;margin-left: 10px;margin-top: -15px;padding-top: 1px;height: 150px">
-          <p style="font-size: 14px;font-family: Arial;font-weight: 600;">`Shared resentments ' but Russia  ties could be 'awkward 'for China</p>
-          <p style="font-size: 12px ;font-family: Roboto;color: gray;object-fit:cover;overflow: hidden"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
-        </div>
-
-      </div>
-
-      <div style="width: 350px; height: 150px; margin-top:20px;display: flex">
-        <div style="width: 150px;height: 140px;">
-          <img src="img/cover3.jpg" style="height: 140px;width: 150px;" >
-        </div>
-        <div style=";float: right;margin-left: 10px;margin-top: -15px;padding-top: 1px;height: 150px">
-          <p style="font-size: 14px;font-family: Arial;font-weight: 600;">`Shared resentments ' but Russia  ties could be 'awkward 'for China</p>
-          <p style="font-size: 12px ;font-family: Roboto;color: gray;object-fit:cover;overflow: hidden"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
-        </div>
-
-      </div>
-    </div>
-    <div style="display: flex ;width: 700px;margin: 5px ">
-      <div style="width: 350px; height: 150px; margin-top:20px;display: flex">
-        <div style="width: 150px;height: 140px;">
-          <img src="img/tank.jpg" style="height: 140px;width: 150px;" >
-        </div>
-        <div style=";float: right;margin-left: 10px;margin-top: -15px;padding-top: 1px;height: 150px">
-          <p style="font-size: 14px;font-family: Arial;font-weight: 600;">`Shared resentments ' but Russia  ties could be 'awkward 'for China</p>
-          <p style="font-size: 12px ;font-family: Roboto;color: gray;object-fit:cover;overflow: hidden"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
-        </div>
-
-      </div>
-
-      <div style="width: 350px; height: 150px; margin-top:20px;display: flex">
-        <div style="width: 150px;height: 140px;">
-          <img src="img/cover4.jpg" style="height: 140px;width: 150px;" >
-        </div>
-        <div style=";float: right;margin-left: 10px;margin-top: -15px;padding-top: 1px;height: 150px">
-          <p style="font-size: 14px;font-family: Arial;font-weight: 600;">`Shared resentments ' but Russia  ties could be 'awkward 'for China</p>
-          <p style="font-size: 12px ;font-family: Roboto;color: gray;object-fit:cover;overflow: hidden"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship.</p>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
 </section>
-</div>
-<div class="section">
-  <section style="height: 550px;">
-    <img src="img/20220224_2_52306047_73986646.jpg" style=";width: 850px;margin-top: -40px;margin-left:-50px;height: 350px">
-    <div class="square" style=";width: 10px;height: 30px;margin-left: 20px;margin-top: -60px;"></div>
-    <div style="margin-top: -40px;margin-left: 40px;color: white" > <p>Ukraine-Russia Crisses</p></div>
-
-    <div style="margin-left: 30px">
-      <div style="margin-top:-10px;margin-left: 50px;">
-        <img src="img/cover4.jpg" class="imagesmall" >
-      </div>
-       <div style="width: 150px;margin-left: 50px" >
-         <p style="font-family: Arial;font-size: 16px;font-weight: 500"> Rejection in the diplomacey of bitcoin its a fake new .</p>
-       </div>
-
-      <div style="margin-top:-250px;margin-left: 250px;">
-        <img src="img/cover3.jpg" class="imagesmall" >
-      </div>
-      <div style="width: 150px;margin-left: 250px" >
-        <p style="font-family: Arial;font-size: 16px;font-weight: 500"> Rejection in the diplomacey of bitcoin its a fake new .</p>
-      </div>
-      <div style="margin-top:-250px;margin-left: 450px;">
-        <img src="img/tank.jpg" class="imagesmall" >
-      </div>
-      <div style="width: 150px;margin-left: 450px" >
-        <p style="font-family: Arial;font-size: 16px;font-weight: 500"> Rejection in the diplomacey of bitcoin its a fake new .</p>
-      </div>
+<div  class="related_topic" >
+    <div>
+     <p>MOST READ </p>
+    <div class="square" style=";margin-left: 90px;margin-top: -30px;"></div>
     </div>
 
+    <div class="related_topic--text">
+        <p> Ukraine is now responaine on the russian attacks.</p>
+        <p> Ukraine is now responaine on the russian attacks.</p>
+        <p> Ukraine is now responaine on the russian attacks.</p>
+        <p> Ukraine is now responaine on the russian attacks.</p>
+        <p> Ukraine is now responaine on the russian attacks.</p>
+        <p> Ukraine is now responaine on the russian attacks.</p>
+        <p> Ukraine is now responaine on the russian attacks.</p>
+        <p> Ukraine is now responaine on the russian attacks.</p>
+        <p> Ukraine is now responaine on the russian attacks.</p>
 
-
-  </section>
-</div>
-<div style="">
-  <div  class="sub" style="padding: 10px">
-   <span style="font-size: 16px;font-family:Roboto" >
-     <p>MOST READ </p>
-       <div class="square" style=";margin-left: 90px;margin-top: -32px;"></div>
-</span>
-    <div style="padding: 5px;">
-    <div style="font-size: 14px;font-weight: 600 "><p> Ukraine is now responaine on the russian attacks.</p></div>
-    <div style="font-size: 14px;font-weight: 600 "><p> Ukraine is now responaine on the russian attacks.</p></div>
-
-    <div style="font-size: 14px;font-weight: 600 "><p> Ukraine is now responaine on the russian attacks.</p></div>
-
-    <div style="font-size: 14px;font-weight: 600 "><p>  fake news Ukraine is now responaine on the russian attacks.</p></div>
-    <div style="font-size: 14px;font-weight: 600 "><p> fake news again Ukraine is now responaine on the russian attacks.</p></div>
-    <div style="font-size: 14px;font-weight: 600 "><p> Becarfi; Ukraine is now responaine on the russian attacks.</p></div>
-    <div style="font-size: 14px;font-weight: 600 "><p>  idk tbh Ukraine is now responaine on the russian attacks.</p></div>
-    <div style="font-size: 14px;font-weight: 600 "><p> Ukraine is now responaine on the russian attacks.</p></div>
-      <div style="font-size: 14px;font-weight: 600 "><p> Ukraine is now responaine on the russian attacks.</p></div>
 
     </div>
   </div>
-</div>
-
-<div class="smallsec">
-  <section style="margin-left:150px">
-
-    <div style="width: 250px;height:100%;float: right;padding: 10px">
-      <img src="img/tank.jpg" style="height: 190px;margin-top: -50px;object-fit: fill;margin-left: 30px;width: 250px;" >
-    </div>
-    <div style="margin-left: -150px">
-      <h2 style=" white-space: break-spaces"><a href="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</a></h2>
-      <p style="font-size: 16px ;font-family: Roboto;color: gray;white-space: break-spaces"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
-    </div>
-
-
-  </section>
-</div>
-
-<div class="picsec">
-  <section >
-<div style="height: 450px;">
-    <div style="margin-right: 5px;">
-    <img src="img/tank.jpg" style="width: 600px;height: 410px;float: left">
-    </div>
-
-    <div>
-      <img src="img/cover2.jpg" style="width: 200px;float: right;margin-right:5px;padding: 2px">
-      <img src="img/cover1.jpg" style="width: 200px;float: right;margin-right:5px;padding: 2px">
-      <img src="img/cover4.jpg" style="width: 200px;float: right;margin-right:5px;padding: 2px">
+<div class="news--small">
+    <div class="news_img" style="">
+            <img src="img/tank.jpg" class="news_img-primery" >
+        </div>
+    <div class="news_text" style="">
+            <h2 class="news_title" style=""><a href="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</a></h2>
+            <p class="news_text--defualt" style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+        </div>
 
 
     </div>
-</div>
-    <div class="square" style=";width: 70px;height: 10px;margin-left: 20px;margin-top: -45px;"></div>
+<div class="pic_gallery">
 
-    <div style="padding-left: 15px;margin-top: -10px">
-      <h2><a href="">Photo Devsatittin: wild fire continue to rage in Argentina </a>  </h2>
+    <img src="img/tank.jpg" class="img--full">
+
+    <div class="img_container">
+        <img src="img/cover2.jpg"class="img_container--small">
+        <img src="img/cover1.jpg" class="img_container--small">
+        <img src="img/cover4.jpg" class="img_container--small">
     </div>
-    <div style="padding-left: 15px;font-weight:100;color: gray">
+    <div class="square"></div>
+    <div class="gallery_title">
+      <h2><a href="">Photo Devsatittin: wild fire continue to rage in Argentina </a></h2>
+    </div>
+    <div class="gallery_text">
       <p> Strong winds , low humidety and drough have fuled wildfire for weeks in northen Argentina  for investegating the mysteriyos fake news here.</p>
     </div>
-  </section>
 </div >
+<sub  class="ads" >
+  <img src="img/ads1.PNG"class="ads_img">
+</sub>
+<div class="news--small">
 
-<div  class="sub" style="height: 300px">
-<div>
-  <img src="img/ads1.PNG"style=";width: 200px;height: 100px;object-fit:contain">
+    <div class="news_img" style="">
+      <img src="img/cover3.jpg" class="news_img-primery" >
+    </div>
+    <div class="news_text" style="">
+      <h2 class="news_title" style=""><a href="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</a></h2>
+      <p class="news_text--defualt" style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+    </div>
+
+
 </div>
-  </div>
-<div class="smallsec">
-  <section style="margin-left:150px">
+<div class="news--small">
 
-    <div style="width: 250px;height:100%;float: right;padding: 10px">
-      <img src="img/cover3.jpg" style="height: 190px;margin-top: -50px;object-fit: fill;margin-left: 30px;width: 250px;" >
+        <div class="news_img" style="">
+            <img src="img/cover1.jpg" class="news_img-primery" >
+        </div>
+        <div class="news_text" style="">
+            <h2 class="news_title" style=""><a href="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</a></h2>
+            <p class="news_text--defualt" style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+        </div>
+
+
     </div>
-    <div style="margin-left: -150px">
-      <h2 style=" white-space: break-spaces"><a href="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</a></h2>
-      <p style="font-size: 16px ;font-family: Roboto;color: gray;white-space: break-spaces"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
-    </div>
-
-
-  </section>
-</div>
-<div class="smallsec">
-  <section style="margin-left:150px">
-
-    <div style="width: 250px;height:100%;float: right;padding: 10px">
-      <img src="img/000_323T6QE.jpg" style="height: 190px;margin-top: -50px;object-fit: fill;margin-left: 30px;width: 250px;" >
-    </div>
-    <div style="margin-left: -150px">
-      <h2 style=" white-space: break-spaces"><a href="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</a></h2>
-      <p style="font-size: 16px ;font-family: Roboto;color: gray;white-space: break-spaces"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
-    </div>
-
-
-  </section>
-</div>
 <div class="quotes">
-  <div>
-    <p style="font-weight: 500;font-size: 18px;font-family: Roboto"> OPINON</p>
-    <div class="square" style=";margin-left: 85px;margin-top: -35px;"></div>
-  </div>
-  <div class="quotesin">
-      <li> <div ><img src="img/cover3.jpg" style="width: 50px;height: 50px;border-radius: 50% "> </div>
-        <i class="fa fa-quote-left" style="font-size:12px;font-weight: 100;color: gray;float: right;margin-right: 160px;margin-top: -15px"></i>
 
-        <div style="margin-left: 60px;margin-top: -60px"><p style="font-size: 16px;font-weight: 600;font-family: Roboto">Last  rites for the Olympics</p></div>
-        <div> <p style="font-size: 14px;font-weight: normal;color: gray;font-family: Roboto;margin-left:90px;margin-top: -14px "> Andrew  Mhatew</p></div>
+    <p style=""> OPINON</p>
+    <div class="square" style=""></div>
+
+    <div class="quotes_text">
+    <li >
+      <div >
+      <img src="img/cover3.jpg" class="quotes_img"> </div>
+      <i class="fa fa-quote-left quotes_icon"></i>
+
+      <div class="quotes_title">
+          <p style="">Last  rites for the Olympics</p>
+      </div>
+       <p class="quotes_name"> Andrew  Mhatew</p>
+
+    </li>
+      <li >
+          <div >
+              <img src="img/cover3.jpg" class="quotes_img"> </div>
+          <i class="fa fa-quote-left quotes_icon"></i>
+
+          <div class="quotes_title">
+              <p style="">Last  rites for the Olympics</p>
+          </div>
+          <p class="quotes_name"> Andrew  Mhatew</p>
 
       </li>
-    <li style="">
-      <div >
-      <img src="img/cover3.jpg" style="width: 50px;height: 50px;border-radius: 50% "> </div>
-      <i class="fa fa-quote-left" style="font-size:12px;font-weight: 100;color: gray;float: right;margin-right: 160px;margin-top: -15px"></i>
-
-      <div style="margin-left: 60px;margin-top: -60px"><p style="font-size: 16px;font-weight: 600;font-family: Roboto">Last  rites for the Olympics</p></div>
-      <div> <p style="font-size: 14px;font-weight: normal;color: gray;font-family: Roboto;margin-left:90px;margin-top: -14px "> Andrew  Mhatew</p></div>
-
-    </li>
-
   </div>
-  <div class="quotesin">
-    <li> <div ><img src="img/cover3.jpg" style="width: 50px;height: 50px;border-radius: 50% "> </div>
-      <i class="fa fa-quote-left" style="font-size:12px;font-weight: 100;color: gray;float: right;margin-right: 160px;margin-top: -15px"></i>
+    <div class="quotes_text">
+        <li >
+            <div >
+                <img src="img/cover3.jpg" class="quotes_img"> </div>
+            <i class="fa fa-quote-left quotes_icon"></i>
 
-      <div style="margin-left: 60px;margin-top: -60px"><p style="font-size: 16px;font-weight: 600;font-family: Roboto">Last  rites for the Olympics</p></div>
-      <div> <p style="font-size: 14px;font-weight: normal;color: gray;font-family: Roboto;margin-left:90px;margin-top: -14px "> Andrew  Mhatew</p></div>
+            <div class="quotes_title">
+                <p style="">Last  rites for the Olympics</p>
+            </div>
+            <p class="quotes_name"> Andrew  Mhatew</p>
 
-    </li>
-    <li>
-      <div >
-        <img src="img/cover3.jpg" style="width: 50px;height: 50px;border-radius: 50% "> </div>
-      <i class="fa fa-quote-left" style="font-size:12px;font-weight: 100;color: gray;float: right;margin-right: 160px;margin-top: -15px"></i>
+        </li>
+        <li >
+            <div >
+                <img src="img/cover3.jpg" class="quotes_img"> </div>
+            <i class="fa fa-quote-left quotes_icon"></i>
 
-      <div style="margin-left: 60px;margin-top: -60px"><p style="font-size: 16px;font-weight: 600;font-family: Roboto">Last  rites for the Olympics</p></div>
-      <div> <p style="font-size: 14px;font-weight: normal;color: gray;font-family: Roboto;margin-left:90px;margin-top: -14px "> Andrew  Mhatew</p></div>
+            <div class="quotes_title">
+                <p style="">Last  rites for the Olympics</p>
+            </div>
+            <p class="quotes_name"> Andrew  Mhatew</p>
 
-    </li>
+        </li>
+    </div>
+    <div class="quotes_text">
+        <li >
+            <div >
+                <img src="img/cover3.jpg" class="quotes_img"> </div>
+            <i class="fa fa-quote-left quotes_icon"></i>
 
-  </div>
-  <div class="quotesin">
-    <li> <div ><img src="img/cover3.jpg" style="width: 50px;height: 50px;border-radius: 50% "> </div>
-      <i class="fa fa-quote-left" style="font-size:12px;font-weight: 100;color: gray;float: right;margin-right: 160px;margin-top: -15px"></i>
+            <div class="quotes_title">
+                <p style="">Last  rites for the Olympics</p>
+            </div>
+            <p class="quotes_name"> Andrew  Mhatew</p>
 
-      <div style="margin-left: 60px;margin-top: -60px"><p style="font-size: 16px;font-weight: 600;font-family: Roboto">Last  rites for the Olympics</p></div>
-      <div> <p style="font-size: 14px;font-weight: normal;color: gray;font-family: Roboto;margin-left:90px;margin-top: -14px "> Andrew  Mhatew</p></div>
+        </li>
+        <li >
+            <div >
+                <img src="img/cover3.jpg" class="quotes_img"> </div>
+            <i class="fa fa-quote-left quotes_icon"></i>
 
-    </li>
-    <li>
-      <div >
-        <img src="img/cover3.jpg" style="width: 50px;height: 50px;border-radius: 50% "> </div>
-      <i class="fa fa-quote-left" style="font-size:12px;font-weight: 100;color: gray;float: right;margin-right: 160px;margin-top: -15px"></i>
+            <div class="quotes_title">
+                <p style="">Last  rites for the Olympics</p>
+            </div>
+            <p class="quotes_name"> Andrew  Mhatew</p>
 
-      <div style="margin-left: 60px;margin-top: -60px"><p style="font-size: 16px;font-weight: 600;font-family: Roboto">Last  rites for the Olympics</p></div>
-      <div> <p style="font-size: 14px;font-weight: normal;color: gray;font-family: Roboto;margin-left:90px;margin-top: -14px "> Andrew  Mhatew</p></div>
-
-    </li>
-
-  </div>
-</div>
-<div class="section2" style="">
-  <div style="margin-left: -10px;">
-    <div class="square" style=";width: 10px;height: 40px;margin-left: 30px;margin-top: -5px;"></div>
-    <div style="margin-top: -50px;margin-left: 50px"> <h2 style=""> Features</h2></div>
-  </div>
-<div style="display: flex">
-  <div class="picslide">
-    <img src="img/cover3.jpg" width="200px">
-    <div> <p style="color: gray;font-size: 14px;font-family: Roboto"> Doctor Note</p></div>
-    <div> <h3>Covid :DO we know the real death tool?</h3></div>
-  </div>
-  <div class="picslide">
-    <img src="img/cover1.jpg" width="200px">
-    <div> <p style="color: gray;font-size: 14px;font-family: Roboto"> Doctor Note</p></div>
-    <div> <h3>Covid :DO we know the real death tool?</h3></div>
-  </div>
-  <div class="picslide">
-    <img src="img/cover2.jpg" width="200px">
-    <div> <p style="color: gray;font-size: 14px;font-family: Roboto"> Doctor Note</p></div>
-    <div> <h3>Covid :DO we know the real death tool?</h3></div>
-  </div>
-
+        </li>
+    </div>
 
 </div>
+<div class="news--large" >
+    <div class="news_element">
+        <div class="square" style=""></div>
+        <h2 style=""> Features</h2>
+    </div>
+    <div class="news_element">
+        <div class="picslide">
+            <img src="img/cover4.jpg" class="pic_slide_img">
+            <p class="pic_slide_text"> Doctor Note</p>
+            <h3>Covid :DO we know the real death tool?</h3>
+        </div>
+        <div class="picslide">
+            <img src="img/cover3.jpg" class="pic_slide_img">
+            <p class="pic_slide_text"> Doctor Note</p>
+            <h3>Covid :DO we know the real death tool?</h3>
+        </div>
+        <div class="picslide">
+            <img src="img/cover1.jpg" class="pic_slide_img">
+            <p class="pic_slide_text"> Doctor Note</p>
+            <h3>Covid :DO we know the real death tool?</h3>
+        </div>
+
+
+    </div>
 
 
 </div>
+<div class="news--large--tall">
 
-<div class="section2" style="height: 420px">
-  <div style="margin: 5px;">
-  <video width="750px" height="300px"
-         controls>
-
-  <source src="https://www.youtube.com/watch?v=4h-l2eaNJQg"
-          type="video/mp4" >
+    <video width="750px" height="300px" controls>
+     <source src="https://www.youtube.com/watch?v=4h-l2eaNJQg" type="video/mp4" >
   </video>
-  </div>
-  <div class="square" style=";width: 100px;height: 10px;margin-left: 20px;margin-top: -15px;"></div>
+    <div class="square" style=""></div>
 
-  <div style="padding-left: 5px">
-    <h2> <a href="">Is putin lastest move a preloud a wider conflict ?</a></h2>
-  </div>
-  <div style="font-size: 18px;color: gray;padding-left: 5px"> <p>Russia deploys there armys in America and its lit out side .</p></div>
+    <h2 class="vedio_title"><a href="">Is putin lastest move a preloud a wider conflict ?</a></h2>
+    <p class="vedio_text">Russia deploys there armys in America and its lit out side .</p>
 </div>
-<div class="smallsec">
-  <section style="margin-left:150px">
+<div class="news--small">
 
-    <div style="width: 250px;height:100%;float: right;padding: 10px">
-      <img src="img/putin.jpg" style="height: 190px;margin-top: -50px;object-fit: fill;margin-left: 30px;width: 250px;" >
+        <div class="news_img" style="">
+            <img src="img/cover4.jpg" class="news_img-primery" >
+        </div>
+        <div class="news_text" style="">
+            <h2 class="news_title" style=""><a href="">`Shared resentments ' but Russia  ties could be 'awkward 'for China</a></h2>
+            <p class="news_text--defualt" style=""> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+        </div>
+
+
     </div>
-    <div style="margin-left: -150px">
-      <h2 style=" white-space: break-spaces"><a href="">China’s Xi speaks to Putin calls for ‘negotiation’ with Ukraine</a></h2>
-      <p style="font-size: 16px ;font-family: Roboto;color: gray;white-space: break-spaces"> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will test the relationship for the statments of the crises in this day .</p>
-    </div>
-
-
-  </section>
-</div>
-
-<footer class="footer">
-  <div style="border-top:1px solid gainsboro; padding-top: 10px;width: 100%"></div>
-  <div>
-    <aside class="subfot">
-      <div style="padding-left: 100px;color:gray;font-family:'Roboto ';font-size:medium;margin-bottom: 10px">Follow Al Jazeera English</div>
-      <div style="width: 200px;margin-left: 100px">
-        <img src="img/rss.png" style="object-fit: cover ;width: 20px;margin: 5px ">
-        <img src="img/instagram.png" style="object-fit: cover ;width: 20px ;margin: 5px">
-        <img src="img/youtube.png" style="object-fit: cover ;width: 20px ;margin: 5px" >
-        <img src="img/facebook.png" style="object-fit: cover ;width: 20px ;margin: 5px" >
-        <img src="img/twitter.png" style="object-fit: cover ;width: 20px;margin: 5px " >
+<div class="footer_accordion" >
+    <button class="accordion">About</button>
+    <div class="panel">
+      <div>
+      <a href="">About Us</a>
       </div>
-      <div> <img src="img/07406f4e6e8f83ea61c4571fcddf8893_icon.png"style="width: 150px;margin-left: 110px;margin-top: 10px">  </div>
-      <div style=" padding-left: 100px;color:gray;font-family: Arial;font-size:small;margin-top: 10px">© 2022 Al Jazeera Media Network</div>
+    <div>
+      <a href="">Code of Ethics</a>
+    </div>
+    <div>
+      <a href="">Terms And Condition</a>
+    </div>
+    <div>
+      <a href="">EU/EEA</a>
+    </div>
+    <div>
+      <a href="">Privecy Policy</a>
+    </div>
+    <div>
+      <a href="">Cookie Policy</a>
+    </div>
+    </div>
+    <button class="accordion">Connect</button>
+    <div class="panel">
+      <div>
+      <a href="">Contact Us</a>
+      </div>
+      <div>
+      <a href="">Apps</a>
+      </div>
+   <div> <a href="">Channel Finder</a></div>
+     <div> <a href="">TV Shecdule</a></div>
+      <div><a href="">Podcast</a></div>
+      <div><a href="">Submit A Tip</a></div>
+    </div>
+    <button class="accordion">Our Channel</button>
+    <div class="panel">
+      <div>
+      <a href="">Al Jazeera Arabic </a>
+      </div>
+    <div >
+      <a href="">Al Jazeera English</a>
+    </div>
+    <div >
+      <a href="">Al Jazeera investgeting</a>
+    </div>
+    <div >
+      <a href="">Al Jazeera Mubasher</a>
+    </div>
+    </div>
+    <button class="accordion">Our Network</button>
+    <div class="panel">
+      <div>
+      <a href="">Al Jazeera Center for Studies</a>
+      </div>
+    <div>
+      <a href="">Al Jazeera Media Institue</a>
+    </div>
+    <div>
+      <a href="">Learn Arabic</a>
+    </div>
+    </div>
+    <div style="" class="footerend">
+      <div class="footer_text">
+      <i style="">Follow Al Jazeera</i>
+     </div>
+      <div class="footer_icon">
+        <img src="img/rss.png"  class="footer_icon--small">
+        <img src="img/instagram.png" class="footer_icon--small">
+        <img src="img/youtube.png" class="footer_icon--small" >
+        <img src="img/facebook.png" class="footer_icon--small">
+        <img src="img/twitter.png" class="footer_icon--small" >
+      </div>
+      <div class="footer_icon--large">
+        <img src="img/07406f4e6e8f83ea61c4571fcddf8893_icon.png" style="">
+      </div>
+      <div class="footer_text">
+          <i>© 2022 Al Jazeera Media Network </i>
+      </div>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-border"></div>
+
+    <aside class="subfot">
+      <i class="subfot-text">  Follow Al Jazeera English</i>
+      <div class="subfot-icons">
+        <img src="img/rss.png" class="subfot-icons--small">
+        <img src="img/instagram.png" class="subfot-icons--small">
+        <img src="img/youtube.png" class="subfot-icons--small">
+        <img src="img/facebook.png" class="subfot-icons--small">
+        <img src="img/twitter.png" class="subfot-icons--small" >
+      </div>
+       <img src="img/07406f4e6e8f83ea61c4571fcddf8893_icon.png"class="subfot-icons--large">
+    <div class="subfot-text-copyright"><i>© 2022 Al Jazeera Media Network</i></div>
     </aside>
-  </div>
-<div class="foterhhead">
-<div>
-    <li><a href="">About</a></li>
-</div>
-  <div>
-    <li><a href="">Connect</a></li>
-  </div>
-  <div>
-    <li> <a href="">Our Channels</a> </li>
-  </div>
-  <div>
-    <li> <a href="">Our Network</a> </li>
-  </div>
 
+    <div class="footer_head">
+        <div>
+          <a href="">About</a>
+        </div>
+        <div>
+            <a href="">Connect</a>
+        </div>
+        <div>
+            <a href="">Our Channels</a>
+        </div>
+        <div>
+             <a href="">Our Network</a>
+        </div>
 
-
-</div>
-  <div class="footerinside">
-    <div style="display: grid">
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">About Us</a></li>
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Code of Ethics</a></li>
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Terms and Conditions</a></li>
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">EU/EEA Regulatory</a></li>
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Privacy Policy</a></li>
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Cookie Policy</a></li>
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Sitemap</a></li>
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Work for us</a></li>
-    <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">HR Quilty </a></li>
     </div>
-    <div style="display: grid">
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Contact Us</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Apps</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Channel Finder</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">TV Shecdule</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Submit</a></li>
+    <div class="footer_inside">
+    <div >
+    <li ><a href="" style="">About Us</a></li>
+    <li ><a href="" >Code of Ethics</a></li>
+    <li ><a href="" >Terms and Conditions</a></li>
+    <li ><a href="" >EU/EEA Regulatory</a></li>
+    <li ><a href="" >Privacy Policy</a></li>
+    <li ><a href="" >Cookie Policy</a></li>
+    <li ><a href="" >Sitemap</a></li>
+    <li ><a href="" >Work for us</a></li>
+    <li ><a href="" >HR Quilty </a></li>
     </div>
-    <div style="display: grid">
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Arabic</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera English</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Investigate Unit</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Mubasher</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Documentry</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Balkans</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">AJ+</a></li>
+    <div >
+      <li ><a href="" >Contact Us</a></li>
+      <li ><a href="" >Apps</a></li>
+      <li ><a href="" >Channel Finder</a></li>
+      <li ><a href="" >TV Shecdule</a></li>
+      <li ><a href="" >Submit</a></li>
     </div>
-    <div style="display: grid">
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Center </a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Media Institue</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Learn Arabic</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera  Center for public Libretes</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Forum</a></li>
-      <li style="padding-top: 10px;"><a href="" style="color: gray;font-size: 16px">Al Jazeera Hoterl Partner</a></li>
+    <div >
+      <li ><a href="" >Al Jazeera Arabic</a></li>
+      <li ><a href="" >Al Jazeera English</a></li>
+      <li ><a href="" >Al Jazeera Investigate Unit</a></li>
+      <li ><a href="" >Al Jazeera Mubasher</a></li>
+      <li ><a href="" >Al Jazeera Documentry</a></li>
+      <li ><a href="" >Al Jazeera Balkans</a></li>
+      <li ><a href="" >AJ+</a></li>
+    </div>
+    <div >
+      <li ><a href="" >Al Jazeera Center </a></li>
+      <li ><a href="" >Al Jazeera Media Institue</a></li>
+      <li ><a href="" >Learn Arabic</a></li>
+      <li ><a href="" >Al Jazeera  Center for public Libretes</a></li>
+      <li ><a href="" >Al Jazeera Forum</a></li>
+      <li ><a href="" >Al Jazeera Hoterl Partner</a></li>
 
     </div>
   </div>
-
-
-
 </footer>
 
 
+
+</div>
 </body>
 
 </html>
