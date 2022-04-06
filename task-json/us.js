@@ -1105,13 +1105,14 @@ const states={
 };
 function list_state(){
     const list_state=[];
-    for (var key in states) {
-        if (key.valueOf) {
-          list_state.push(key);
-        }
-    }
+    states.array.forEach(element => {
+      list_state.push(element);
+
+    });
+   
     return list_state;
   }
+  
  
 function number_of_city (name)
 {

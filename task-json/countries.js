@@ -244,12 +244,8 @@ const countries= [
     {name: 'Zimbabwe', code: 'ZW'} 
   ];
   function list_countries(){
-    const listcountries=[];
-    for (var key in countries) {
-         let obj =JSON.parse(key);
-        listcountries.push(countries[obj].name);
-  }
-  return listcountries;
+    return  countries.map (x=> x.name) ;
+
 }
 
 function list_countries_code(){
