@@ -1,16 +1,15 @@
 function generateArrayOfNumbers(arrayLength){
     const arr=new Array(arrayLength);
-    
-
-arr.fill().map((value,indx)=>(arr[indx]=Math.floor(Math.random()*10)));
-
+    for(let i=0 ;i<arrayLength;i++){
+    arr[i]=Math.floor(Math.random()*10);
+}
     return arr ;
 }
 const arr=generateArrayOfNumbers(100);
 function getArrayOfNumbersWithoutDuplication(arrayOfNumbers) {
     unique = new Set(arrayOfNumbers);
     console.log(unique);
-    return unique
+    return  Array.from(unique);
 }
 
 function getArrayOfNumbersWithoutDuplication1(arrayOfNumbers) {
@@ -45,4 +44,4 @@ const count = {};
 }
 
 getDuplication2(arr);
-getArrayOfNumbersWithoutDuplication1(arr);
+getDuplication(arr);
