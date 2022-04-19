@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" pattern=".{3,}"  ><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" pattern=".{3,}"  ><br>
+  <label for="date">Date :</label><br>
+  <input type="date" id="date" name="date"  ><br>
+  <label for="salary">Salary:</label><br>
+  <input type="number" id="salary" min="0"> <br>
+  <label for="email">email</label><br>
+  <input type="email" id="email" > <br>
+  <label for="color">Favorite Color</label><br>
+  <input type="color" id="color" > <br>
+  <label for="image">Favorite Color</label><br>
+  <input type="file" id="image" accept="image/png,image/gif,image/jpeg" ><br>
+  <p>Please select your gender</p>
+    <input type="radio" id="Male" name="gender"  value="male">
+ <label for="Male">Male</label><br>
+ <input type="radio" id="Female" name="gender" value="female">
+<label for="Female">Female</label><br>
+<p>Please select your courses</p>
+
+<input type="checkbox" id="java"  value="Java">
+<label for="java"> Java</label><br>
+<input type="checkbox" id="C++" value="C++">
+<label for="C++"> C++</label><br>
+<input type="checkbox" id="python" value="Python">
+<label for="python">Python</label><br>
+<input type="checkbox" id="PHP" value="PHP">
+<label for="PHP">PHP</label><br>  
+<textarea rows = "3"  id = "description"> </textarea><br>
+ <label for="description">Description</label><br>
+
+   
+  <input type="submit" value="Submit">
+</form> 
+
+
+</body>
+<script>
+  
+    document.getElementById('date').max=new Date().toISOString().split("T")[0];;  
+    
+      </script>
+</html>
+
