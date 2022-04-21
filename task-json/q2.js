@@ -10,15 +10,9 @@ const timeinseconds = [4,5,2,10,0];
 
  function delay (seconds){
     return new  Promise( function(resolve, reject) {
-      
-        
-
         resolve();
-     
     }).then(function() {
-        delay1(seconds)
-       
-        
+        delay1(seconds);
        
     });
 }
