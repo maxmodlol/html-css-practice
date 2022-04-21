@@ -1,27 +1,22 @@
 
-const timeinseconds = [4,5,2,10,0];
- function  delay1(seconds){
-
-    setTimeout(function () {
-        console.log(`${seconds} seconds` );
-         
-    }, seconds*1000);
-}
-
- function delay (seconds){
-    return new  Promise( function(resolve, reject) {
-      
-        
-
-        resolve();
-     
-    }).then(function() {
-        delay1(seconds)
-       
-        
-       
+const timeInSeconds = [4, 5, 2, 10, 0];
+  function delay (seconds) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+        resolve(seconds);
+        }, seconds *10);
     });
 }
-for(let x=0 ;x<timeinseconds.length;x++){
-    delay(timeinseconds[x]);
+
+ async function result () {
+    let totalTimeForNextIteration = 0;
+    // eslint-disable-next-line no-restricted-syntax
+    for (const time of timeInSeconds) {
+        totalTimeForNextIteration += time;
+        // eslint-disable-next-line no-await-in-loop
+       await  delay(totalTimeForNextIteration);
+        console.log(time);
+    }
 }
+
+ result();
