@@ -7,15 +7,15 @@
 <form id="my-form" onsubmit="myFunction()">
   <div>
     <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" pattern=".{3,}"><br>
+    <input type="text" id="fname" name="fname" minlength="3"><br>
   </div>
   <div>
     <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" pattern=".{3,}"><br>
+    <input type="text" id="lname" name="lname" minlength="3"><br>
   </div>
   <div>
     <label for="date">Date :</label><br>
-    <input type="date" id="date" name="date"  ><br>
+    <input type="date" id="date" name="date" max='' ><br>
   </div>
   <div>
     <label for="salary">Salary:</label><br>
@@ -27,10 +27,10 @@
   </div>
   <div>
     <label for="color">Favorite Color</label><br>
-    <input type="color" id="color" > <br>
+    <input type="color" id="color"  value="#008000"> <br>
   </div>
   <div>
-    <label for="image">Favorite Color</label><br>
+    <label for="image">Choose Image</label><br>
     <input type="file" id="image" accept="image/png,image/gif,image/jpeg" ><br>
   </div>
   <div>
@@ -63,6 +63,7 @@
     <script>  
     document.getElementById('date').max=new Date().toISOString().split("T")[0];;  
      </script>
+     
      <script>
       function myFunction(){
        var inputs = document.getElementById("my-form").elements;
