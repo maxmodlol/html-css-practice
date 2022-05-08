@@ -22,7 +22,7 @@
 </style>
   
 </head>
-<body id="body">
+<body >
 <div class="container mt-5">
     <form class="col mx-auto">
       <div class="form-row">
@@ -73,22 +73,22 @@
       <div class="form-check">
         <p > Please Select Your Couurses</p>
 
-        <input class="form-check-input" type="checkbox" name="check_box" value="JAVA" id="check_v1">
-        <label class="form-check-label" for="check_v1">
+        <input class="form-check-input" type="checkbox" name="check_box" value="JAVA" id="Java_CheckBox">
+        <label class="form-check-label" for="Java_CheckBox">
           Java
         </label>
       </div>
       <div class="form-check">
 
-        <input class="form-check-input" type="checkbox" name="check_box" value="C++" id="check_v2" >
-        <label class="form-check-label" for="check_v2">
+        <input class="form-check-input" type="checkbox" name="check_box" value="C++" id="C++_CheckBox" >
+        <label class="form-check-label" for="C++_CheckBox">
           C++
         </label>
       </div>
       <div class="form-check">
 
-        <input class="form-check-input" type="checkbox" name="check_box" value="python" id="check_v3" >
-        <label class="form-check-label" for="check_v3">
+        <input class="form-check-input" type="checkbox" name="check_box" value="python" id="Python_CheckBox" >
+        <label class="form-check-label" for="Python_CheckBox">
           Python
         </label>
       </div>
@@ -118,6 +118,7 @@
  
 </script>
 <script type="text/javascript">
+<<<<<<< HEAD
   $('#save1').on('click', function() {
   var first_name=$('#firstName1').val();
   var last_name=$('#lastName1').val();
@@ -131,16 +132,33 @@
                  
     var gender=getSelectedValue.value;
  
+=======
+  $('#save').on('click', function() {
+    const checkbox=[];
+    var getSelectedValue = document.querySelector('input[name="gender"]:checked');  
+    var boxes = document.getElementsByName('check_box');
+
+for (var i=0; i<boxes.length; i++) {
+  if(boxes[i].checked)
+  checkbox.push(boxes[i].value);
+
+}
+
+    var table_values =[ 
+ { name:"firstname", data:$('#firstName').val()},
+  {name: "last_name",data:$('#lastName').val()},
+  {name:"date" ,data:$('#date-picker').val()},
+ {name:"salary",data:$('#salary').val()},
+ {name:"color",data: $('#color').val()},
+ {name:"textarea",data:$('#Textarea').val()},
+ {name:"gender",data:getSelectedValue.value},
+ {name:"courses",data:checkbox},
+  ]
+>>>>>>>  loop through elements
  
 
  
- var boxes = document.getElementsByName('check_box');
 
- for (var i=0; i<boxes.length; i++) {
-   if(boxes[i].checked)
-   checkbox.push(boxes[i].value);
-
- }
 
  let table = document.createElement('table');
 let thead = document.createElement('thead');
@@ -149,7 +167,7 @@ let tbody = document.createElement('tbody');
 table.appendChild(thead);
 table.appendChild(tbody);
 
-document.getElementById('body').appendChild(table);
+document.getElementsByTagName('body')[0].appendChild(table);
 let row_1 = document.createElement('tr');
 let heading_1 = document.createElement('th');
 heading_1.innerHTML = "FirstName";
@@ -178,30 +196,13 @@ row_1.appendChild(heading_8);
 thead.appendChild(row_1);
 
 let row_2 = document.createElement('tr');
-let row_2_data_1 = document.createElement('td');
-row_2_data_1.innerHTML = first_name;
-let row_2_data_2 = document.createElement('td');
-row_2_data_2.innerHTML = last_name;
-let row_2_data_3 = document.createElement('td');
-row_2_data_3.innerHTML = date;
-let row_2_data_4 = document.createElement('td');
-row_2_data_4.innerHTML = salary;
-let row_2_data_5 = document.createElement('td');
-row_2_data_5.innerHTML = color;
-let row_2_data_6 = document.createElement('td');
-row_2_data_6.innerHTML = textarea;
-let row_2_data_7 = document.createElement('td');
-row_2_data_7.innerHTML =gender;
-let row_2_data_8 = document.createElement('td');
-row_2_data_8.innerHTML = checkbox;
-row_2.appendChild(row_2_data_1);
-row_2.appendChild(row_2_data_2);
-row_2.appendChild(row_2_data_3);
-row_2.appendChild(row_2_data_4);
-row_2.appendChild(row_2_data_5);
-row_2.appendChild(row_2_data_6);
-row_2.appendChild(row_2_data_7);
-row_2.appendChild(row_2_data_8);
+  table_values.forEach(function(arrayitem){
+    let row_2_data_1 = document.createElement('td');
+    row_2_data_1.innerHTML = arrayitem.data;
+    row_2.appendChild(row_2_data_1);
+  });
+
+
 tbody.appendChild(row_2);
 
 
