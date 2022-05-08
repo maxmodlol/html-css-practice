@@ -9,36 +9,48 @@
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" type="text/css" media="all">
   
   
+  <style>
+    table{
+        margin:60px;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    th, td{
+        padding: 10px 20px;
+        border: 1px solid #000;
+    }
+</style>
+  
 </head>
-<body>
+<body id="body">
 <div class="container mt-5">
     <form class="col mx-auto">
       <div class="form-row">
         <div class="col">
-          <label for="exampleInputfn">First Name</label>
-          <input type="text" class="form-control" id="exampleInputfn" placeholder="First name">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="First name">
         </div>
         <div class="col">
-          <label for="exampleInputln">Last Name</label>
-          <input type="text" class="form-control" id="exampleInputln" placeholder="Last name">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Last name">
         </div>
 
        
       </div>
       <div class="form-group">
-        <label for="date-picker-example">Date</label>
+        <label for="date-picker">Date</label>
 
-        <input placeholder="Selected date" type="text" id="date-picker-example" class="form-control datepicker">
+        <input placeholder="Selected date" type="text" id="date-picker" class="form-control datepicker">
       </div>
       <div class="form-group">   
-        <label for="replyNumber">Salary</label>
+        <label for="salary">Salary</label>
                    
-        <input type="number" class="form-control" id="replyNumber" min="0" data-bind="value:replyNumber" />
+        <input type="number" class="form-control" id="salary" min="0" />
       </div>
       <div class="form-group">
         <section class="form-group">
-          <label for="exampleColorInput" class="form-label">Color picker</label>
-          <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#008000" title="Choose your color">
+          <label for="color" class="form-label">Color picker</label>
+          <input type="color" class="form-control form-control-color" id="color" value="#008000" title="Choose your color">
         </section>
       </div>
       <div class="form-group">
@@ -47,47 +59,47 @@
       </div>
       <div class="form-check">
       <p > Please Select Your Gender</p>
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="gender" id="male_option" value="Male" checked>
+        <label class="form-check-label" for="male_option">
           Male
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="gender" id="female_option" value="Female">
+        <label class="form-check-label" for="female_option">
           Female
         </label>
       </div>
       <div class="form-check">
         <p > Please Select Your Couurses</p>
 
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
+        <input class="form-check-input" type="checkbox" name="check_box" value="JAVA" id="check_v1">
+        <label class="form-check-label" for="check_v1">
           Java
         </label>
       </div>
       <div class="form-check">
 
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
-        <label class="form-check-label" for="defaultCheck2">
+        <input class="form-check-input" type="checkbox" name="check_box" value="C++" id="check_v2" >
+        <label class="form-check-label" for="check_v2">
           C++
         </label>
       </div>
       <div class="form-check">
 
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" >
-        <label class="form-check-label" for="defaultCheck3">
+        <input class="form-check-input" type="checkbox" name="check_box" value="python" id="check_v3" >
+        <label class="form-check-label" for="check_v3">
           Python
         </label>
       </div>
       <div class="mb-3">
-        <label for="validationTextarea">Textarea</label>
-        <textarea class="form-control " id="validationTextarea" placeholder="Required example textarea" required></textarea>
+        <label for="Textarea">Textarea</label>
+        <textarea class="form-control " id="Textarea" placeholder="Required example textarea" required></textarea>
         <div class="invalid-feedback">
           Please enter a message in the textarea.
         </div>
       </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" id="save">Submit</button>
       </form>
   </div>
 
@@ -105,3 +117,97 @@
       });
  
 </script>
+<script type="text/javascript">
+  $('#save').on('click', function() {
+  var first_name=$('#firstName').val();
+  var last_name=$('#lastName').val();
+  var date=$('#date-picker').val();
+ var salary=$('#salary').val();
+ var color= $('#color').val();
+ var textarea=$('#Textarea').val();
+ const checkbox=[];
+ var getSelectedValue = document.querySelector(   
+                'input[name="gender"]:checked');  
+                 
+    var gender=getSelectedValue.value;
+ 
+ 
+
+ 
+ var boxes = document.getElementsByName('check_box');
+
+ for (var i=0; i<boxes.length; i++) {
+   if(boxes[i].checked)
+   checkbox.push(boxes[i].value);
+
+ }
+
+ let table = document.createElement('table');
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+document.getElementById('body').appendChild(table);
+let row_1 = document.createElement('tr');
+let heading_1 = document.createElement('th');
+heading_1.innerHTML = "FirstName";
+let heading_2 = document.createElement('th');
+heading_2.innerHTML = "LastName";
+let heading_3 = document.createElement('th');
+heading_3.innerHTML = "Date";
+let heading_4 = document.createElement('th');
+heading_4.innerHTML = "Salary";
+let heading_5 = document.createElement('th');
+heading_5.innerHTML = "Color";
+let heading_6 = document.createElement('th');
+heading_6.innerHTML = "About";
+let heading_7 = document.createElement('th');
+heading_7.innerHTML = "Gender"
+let heading_8 = document.createElement('th');
+heading_8.innerHTML = "Courses";
+row_1.appendChild(heading_1);
+row_1.appendChild(heading_2);
+row_1.appendChild(heading_3);
+row_1.appendChild(heading_4);
+row_1.appendChild(heading_5);
+row_1.appendChild(heading_6);
+row_1.appendChild(heading_7);
+row_1.appendChild(heading_8);
+thead.appendChild(row_1);
+
+let row_2 = document.createElement('tr');
+let row_2_data_1 = document.createElement('td');
+row_2_data_1.innerHTML = first_name;
+let row_2_data_2 = document.createElement('td');
+row_2_data_2.innerHTML = last_name;
+let row_2_data_3 = document.createElement('td');
+row_2_data_3.innerHTML = date;
+let row_2_data_4 = document.createElement('td');
+row_2_data_4.innerHTML = salary;
+let row_2_data_5 = document.createElement('td');
+row_2_data_5.innerHTML = color;
+let row_2_data_6 = document.createElement('td');
+row_2_data_6.innerHTML = textarea;
+let row_2_data_7 = document.createElement('td');
+row_2_data_7.innerHTML =gender;
+let row_2_data_8 = document.createElement('td');
+row_2_data_8.innerHTML = checkbox;
+row_2.appendChild(row_2_data_1);
+row_2.appendChild(row_2_data_2);
+row_2.appendChild(row_2_data_3);
+row_2.appendChild(row_2_data_4);
+row_2.appendChild(row_2_data_5);
+row_2.appendChild(row_2_data_6);
+row_2.appendChild(row_2_data_7);
+row_2.appendChild(row_2_data_8);
+tbody.appendChild(row_2);
+
+
+
+
+
+
+  });
+  </script>
