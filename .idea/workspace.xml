@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="49f9691b-7968-42fa-8585-c5c7931fbace" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/csshome.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/csshome.css" afterDir="false" />
     </list>
+=======
+    <list default="true" id="49f9691b-7968-42fa-8585-c5c7931fbace" name="Changes" comment="" />
+>>>>>>> cd091a2e35227bb9fe5bd4ef4616f6149ff1fd8f
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
