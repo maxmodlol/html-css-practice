@@ -130,14 +130,14 @@ for (var i=0; i<boxes.length; i++) {
 }
 
     var table_values =[ 
- { name:"firstname", data:$('#firstName').val()},
-  {name: "last_name",data:$('#lastName').val()},
-  {name:"date" ,data:$('#date-picker').val()},
- {name:"salary",data:$('#salary').val()},
- {name:"color",data: $('#color').val()},
- {name:"textarea",data:$('#Textarea').val()},
- {name:"gender",data:getSelectedValue.value},
- {name:"courses",data:checkbox},
+ { name:"Firstname", data:$('#firstName').val()},
+  {name: "Last_name",data:$('#lastName').val()},
+  {name:"Date" ,data:$('#date-picker').val()},
+ {name:"Salary",data:$('#salary').val()},
+ {name:"Color",data: $('#color').val()},
+ {name:"Textarea",data:$('#Textarea').val()},
+ {name:"Gender",data:getSelectedValue.value},
+ {name:"Courses",data:checkbox},
   ]
  
 
@@ -185,7 +185,6 @@ let row_2 = document.createElement('tr');
     row_2_data_1.innerHTML = arrayitem.data;
     row_2.appendChild(row_2_data_1);
   });
-
 
 tbody.appendChild(row_2);
 
