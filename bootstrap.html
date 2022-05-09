@@ -1,0 +1,197 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" type="text/css" media="all">
+  
+  
+  <style>
+    table{
+        margin:60px;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    th, td{
+        padding: 10px 20px;
+        border: 1px solid #000;
+    }
+</style>
+  
+</head>
+<body >
+<div class="container mt-5">
+    <form class="col mx-auto">
+      <div class="form-row">
+        <div class="col">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="First name">
+        </div>
+        <div class="col">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Last name">
+        </div>
+
+       
+      </div>
+      <div class="form-group">
+        <label for="date-picker">Date</label>
+
+        <input placeholder="Selected date" type="text" id="date-picker" class="form-control datepicker">
+      </div>
+      <div class="form-group">   
+        <label for="salary">Salary</label>
+                   
+        <input type="number" class="form-control" id="salary" min="0" />
+      </div>
+      <div class="form-group">
+        <section class="form-group">
+          <label for="color" class="form-label">Color picker</label>
+          <input type="color" class="form-control form-control-color" id="color" value="#008000" title="Choose your color">
+        </section>
+      </div>
+      <div class="form-group">
+        <label for="formFile" class="form-label">Image </label>
+        <input class="form-control" type="file" id="formFile" accept=".jpg,.gif,.png">
+      </div>
+      <div class="form-check">
+      <p > Please Select Your Gender</p>
+        <input class="form-check-input" type="radio" name="gender" id="male_option" value="Male" checked>
+        <label class="form-check-label" for="male_option">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="female_option" value="Female">
+        <label class="form-check-label" for="female_option">
+          Female
+        </label>
+      </div>
+      <div class="form-check">
+        <p > Please Select Your Couurses</p>
+
+        <input class="form-check-input" type="checkbox" name="check_box" value="JAVA" id="Java_CheckBox">
+        <label class="form-check-label" for="Java_CheckBox">
+          Java
+        </label>
+      </div>
+      <div class="form-check">
+
+        <input class="form-check-input" type="checkbox" name="check_box" value="C++" id="C++_CheckBox" >
+        <label class="form-check-label" for="C++_CheckBox">
+          C++
+        </label>
+      </div>
+      <div class="form-check">
+
+        <input class="form-check-input" type="checkbox" name="check_box" value="python" id="Python_CheckBox" >
+        <label class="form-check-label" for="Python_CheckBox">
+          Python
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="Textarea">Textarea</label>
+        <textarea class="form-control " id="Textarea" placeholder="Required example textarea" required></textarea>
+        <div class="invalid-feedback">
+          Please enter a message in the textarea.
+        </div>
+      </div>
+        <button type="button" class="btn btn-primary" id="save">Submit</button>
+      </form>
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+      $('.datepicker').datepicker({
+        maxDate: new Date(),
+         format: "dd/mm/yyyy",
+                toggleActive: true,
+                todayBtn: "linked",
+                changeMonth: true,
+                changeYear: true
+      });
+ 
+</script>
+<script type="text/javascript">
+  $('#save').on('click', function() {
+    const checkbox=[];
+    var getSelectedValue = document.querySelector('input[name="gender"]:checked');  
+    var boxes = document.getElementsByName('check_box');
+
+for (var i=0; i<boxes.length; i++) {
+  if(boxes[i].checked)
+  checkbox.push(boxes[i].value);
+
+}
+
+    var table_values =[ 
+ { name:"Firstname", data:$('#firstName').val()},
+  {name: "Last_name",data:$('#lastName').val()},
+  {name:"Date" ,data:$('#date-picker').val()},
+ {name:"Salary",data:$('#salary').val()},
+ {name:"Color",data: $('#color').val()},
+ {name:"Textarea",data:$('#Textarea').val()},
+ {name:"Gender",data:getSelectedValue.value},
+ {name:"Courses",data:checkbox},
+  ]
+ 
+
+ 
+
+
+ let table = document.createElement('table');
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+document.getElementsByTagName('body')[0].appendChild(table);
+let row_1 = document.createElement('tr');
+let heading_1 = document.createElement('th');
+heading_1.innerHTML = "FirstName";
+let heading_2 = document.createElement('th');
+heading_2.innerHTML = "LastName";
+let heading_3 = document.createElement('th');
+heading_3.innerHTML = "Date";
+let heading_4 = document.createElement('th');
+heading_4.innerHTML = "Salary";
+let heading_5 = document.createElement('th');
+heading_5.innerHTML = "Color";
+let heading_6 = document.createElement('th');
+heading_6.innerHTML = "About";
+let heading_7 = document.createElement('th');
+heading_7.innerHTML = "Gender"
+let heading_8 = document.createElement('th');
+heading_8.innerHTML = "Courses";
+row_1.appendChild(heading_1);
+row_1.appendChild(heading_2);
+row_1.appendChild(heading_3);
+row_1.appendChild(heading_4);
+row_1.appendChild(heading_5);
+row_1.appendChild(heading_6);
+row_1.appendChild(heading_7);
+row_1.appendChild(heading_8);
+thead.appendChild(row_1);
+
+let row_2 = document.createElement('tr');
+  table_values.forEach(function(arrayitem){
+    let row_2_data_1 = document.createElement('td');
+    row_2_data_1.innerHTML = arrayitem.data;
+    row_2.appendChild(row_2_data_1);
+  });
+
+tbody.appendChild(row_2);
+
+
+
+
+
+
+  });
+  </script>
