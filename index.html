@@ -1,0 +1,538 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <script>
+        function myfun(x) {
+            x.classList.toggle("fa fa-close");
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+
+
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <script> function deletehtml(clicked_id){
+            const element = document.getElementById(clicked_id);
+            if(confirm("You Have deleted the selected element")){
+                var child = element.firstChild;
+                while (child) {
+                    element.removeChild(child);
+                    child = element.firstChild;
+                }
+                element.remove();
+            }
+            else{
+                alert("You Have Canceld");
+            }
+        }
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/csshome.css">
+    <meta name="theme-color" content="#fafafa">
+
+</head>
+<body>
+<div class="container">
+    <nav class="header" id="nav">
+        <div class="logo">
+            <a href="#">
+                <img src="img/07406f4e6e8f83ea61c4571fcddf8893_icon.png" class="logo_img">
+            </a>
+        </div>
+        <div class="nav_item">
+            <a href="#" class="aljazer_logo">
+                <i> ALJAZEERA </i>
+            </a>
+            <a href="#"> News <i class="arrow"></i></a>
+            <a href="#"> Ukraine Crises</a>
+            <a href="#"> Features</a>
+            <a href="#"> Economy</a>
+            <a href="#"> Opinion</a>
+            <a href="#"> Video</a>
+            <a href="#"> More <i class="arrow"></i></a>
+            <a href="#"><img src="img/live-streaming.png"></a>
+            <a href="#"> <img src="img/loupe.png">
+            </a>
+        </div>
+        <div class="liveicon">
+            <a>
+                <img src="img/live-streaming.png" class="liveicon--small">
+            </a>
+        </div>
+        <div class="ham_menu">
+            <a href="javascript:void(0);" class="ham_menu_icon" onclick="myFunction()">
+                <i class="fa fa-bars" onclick="myfun(this)"></i>
+            </a>
+        </div>
+        <div class="mobile-container">
+            <nav class="PopUp_nav" id="myLinks">
+                <li><input class="mobile-container-search" type="text" placeholder="Search.."></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Ukraine Crises</a></li>
+                <li><a href="#about">Feature</a></li>
+                <li><a href="#about">Economy</a></li>
+                <li><a href="#about">Opinion</a></li>
+                <li><a href="#about">Video</a></li>
+                <li><a href="#about">More</a></li>
+            </nav>
+        </div>
+    </nav>
+    <div class="main_news">
+        <div class="content_main">
+            <div><img src="img/tank.jpg" class="img_large"></div>
+            <div class="square"></div>
+            <div class="text_main">
+                <p class="live_text red">
+                    <span class="dot"></span>
+                    LIVE UPDATES </p>
+                <h2> Ukrine to declare state of emergency as threat of war looms</h2>
+                <p class="text--gray"> After calling on citizines to leave Russia and imposing new sanctions ,Ukraine
+                    heads towards emergency rule</p>
+                <p class="text--bold"> Related Stories </p>
+                <p>Nord stream 2 ,What you should know about Russian's gas pipline to Europe Russian-Ukraine crises 5
+                    things to know about Putin's hold move what sections have been imposed on Russia?</p>
+            </div>
+        </div>
+        <div class="content_right">
+            <div class="news_meduiem">
+                <img src="img/000_323T6QE.jpg" class="img_meduiem">
+                <div class="inner_text">
+                    <h2>`Shared resentments ' but Russia ties could be 'awkward 'for China</h2>
+                    <p> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises will
+                        test the relationship for the statments of the crises in this day .</p>
+                </div>
+
+            </div>
+            <div class="splited_content">
+                <div id="cs1" onclick="deletehtml(this.id)" class="content_small" >
+                    <img src="img/putin.jpg" class="img_small">
+                    <div>
+                        <h2>`Shared resentments ' but Russia ties could be 'awkward 'for China</h2>
+                        <p> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises
+                            will test the relationship.</p>
+                    </div>
+                </div>
+                <div id="cs2" onclick="deletehtml(this.id)"class="content_small">
+                    <img src="img/cover4.jpg" class="img_small">
+                    <div>
+                        <h2>`Shared resentments ' but Russia ties could be 'awkward 'for China</h2>
+                        <p> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises
+                            will test the relationship.</p>
+                    </div>
+                </div>
+                <div id="cs3"onclick="deletehtml(this.id)" class="content_small">
+
+                    <img src="img/cover3.jpg" class="img_small">
+                    <div>
+                        <h2>`Shared resentments ' but Russia ties could be 'awkward 'for China</h2>
+                        <p> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises
+                            will test the relationship.</p>
+                    </div>
+
+                </div>
+                <div id="cs4"onclick="deletehtml(this.id)" class="content_small">
+
+                    <img src="img/cover2.jpg" class="img_small">
+                    <div>
+                        <h2>`Shared resentments ' but Russia ties could be 'awkward 'for China</h2>
+                        <p> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises
+                            will test the relationship.</p>
+                    </div>
+
+                </div>
+                <div id="cs5"onclick="deletehtml(this.id)" class="content_small">
+
+                    <img src="img/tank.jpg" class="img_small">
+                    <div>
+                        <h2>`Shared resentments ' but Russia ties could be 'awkward 'for China</h2>
+                        <p> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises
+                            will test the relationship.</p>
+                    </div>
+
+                </div>
+                <div id="cs6"onclick="deletehtml(this.id)" class="content_small">
+
+                    <img src="img/cover1.jpg" class="img_small">
+                    <div>
+                        <h2>`Shared resentments ' but Russia ties could be 'awkward 'for China</h2>
+                        <p> Russia and china's leaders have met more than 30 times since 2013 ,but the Ukraine crises
+                            will test the relationship.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="large">
+        <img src="img/20220224_2_52306047_73986646.jpg" class="large_img">
+        <p class="title_large">Ukraine-Russia Crisses</p>
+        <div class="slider_container">
+            <div class="slider_box">
+                <img src="img/cover4.jpg" class="imagesmall">
+                <p> Rejection in the diplomacey of bitcoin its a fake new .</p>
+            </div>
+            <div class="slider_box">
+                <img src="img/cover3.jpg" class="imagesmall">
+                <p> Rejection in the diplomacey of bitcoin its a fake new .</p>
+            </div>
+            <div class="slider_box">
+                <img src="img/cover2.jpg" class="imagesmall">
+                <p> Rejection in the diplomacey of bitcoin its a fake new .</p>
+            </div>
+        </div>
+    </section>
+    <div class="related_topic">
+        <div>
+            <p>MOST READ </p>
+            <div class="square"></div>
+        </div>
+        <div class="related_topic_text">
+            <p> Ukraine is now responaine on the russian attacks.</p>
+            <p> Ukraine is now responaine on the russian attacks.</p>
+            <p> Ukraine is now responaine on the russian attacks.</p>
+            <p> Ukraine is now responaine on the russian attacks.</p>
+            <p> Ukraine is now responaine on the russian attacks.</p>
+            <p> Ukraine is now responaine on the russian attacks.</p>
+            <p> Ukraine is now responaine on the russian attacks.</p>
+            <p> Ukraine is now responaine on the russian attacks.</p>
+            <p> Ukraine is now responaine on the russian attacks.</p>
+        </div>
+    </div>
+    <div class="news--small">
+        <div class="news_img">
+            <img src="img/tank.jpg" class="news_img-primery">
+        </div>
+        <div class="news_text">
+            <h2 class="news_title"><a href="#">`Shared resentments ' but Russia ties could be 'awkward 'for China</a>
+            </h2>
+            <p class="news_text--defualt"> Russia and china's leaders have met more than 30 times since 2013 ,but the
+                Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+        </div>
+    </div>
+    <div class="pic_gallery">
+        <img src="img/tank.jpg" class="img--full">
+        <div class="container_img">
+            <img src="img/cover2.jpg" class="gallery_img--small">
+            <img src="img/cover1.jpg" class="gallery_img--small">
+            <img src="img/cover4.jpg" class="gallery_img--small">
+        </div>
+        <div class="square"></div>
+        <div class="gallery_title">
+            <h2><a href="#">Photo Devsatittin: wild fire continue to rage in Argentina </a></h2>
+        </div>
+        <div class="gallery_text">
+            <p> Strong winds , low humidety and drough have fuled wildfire for weeks in northen Argentina for
+                investegating the mysteriyos fake news here.</p>
+        </div>
+    </div>
+    <sub class="ads">
+        <img src="img/ads1.PNG" class="ads_img">
+    </sub>
+    <div class="news--small">
+        <div class="news_img">
+            <img src="img/cover3.jpg" class="news_img-primery">
+        </div>
+        <div class="news_text">
+            <h2 class="news_title"><a href="#">`Shared resentments ' but Russia ties could be 'awkward 'for China</a>
+            </h2>
+            <p class="news_text--defualt"> Russia and china's leaders have met more than 30 times since 2013 ,but the
+                Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+        </div>
+    </div>
+    <div class="news--small">
+
+        <div class="news_img">
+            <img src="img/cover1.jpg" class="news_img-primery">
+        </div>
+        <div class="news_text">
+            <h2 class="news_title"><a href="#">`Shared resentments ' but Russia ties could be 'awkward 'for China</a>
+            </h2>
+            <p class="news_text--defualt"> Russia and china's leaders have met more than 30 times since 2013 ,but the
+                Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+        </div>
+
+
+    </div>
+    <div class="quotes">
+        <p> OPINON</p>
+        <div class="square"></div>
+        <div class="quotes_text">
+            <li>
+                <div><img src="img/cover3.jpg" class="quotes_img"></div>
+                <i class="fa fa-quote-left quotes_icon"></i>
+                <div class="quotes_title">
+                    <p>Last rites for the Olympics</p>
+                </div>
+                <p class="quotes_name"> Andrew Mhatew</p>
+            </li>
+            <li>
+                <div>
+                    <img src="img/cover3.jpg" class="quotes_img"></div>
+                <i class="fa fa-quote-left quotes_icon"></i>
+
+                <div class="quotes_title">
+                    <p>Last rites for the Olympics</p>
+                </div>
+                <p class="quotes_name"> Andrew Mhatew</p>
+
+            </li>
+        </div>
+        <div class="quotes_text">
+            <li>
+                <div>
+                    <img src="img/cover3.jpg" class="quotes_img"></div>
+                <i class="fa fa-quote-left quotes_icon"></i>
+
+                <div class="quotes_title">
+                    <p>Last rites for the Olympics</p>
+                </div>
+                <p class="quotes_name"> Andrew Mhatew</p>
+
+            </li>
+            <li>
+                <div>
+                    <img src="img/cover3.jpg" class="quotes_img"></div>
+                <i class="fa fa-quote-left quotes_icon"></i>
+
+                <div class="quotes_title">
+                    <p>Last rites for the Olympics</p>
+                </div>
+                <p class="quotes_name"> Andrew Mhatew</p>
+
+            </li>
+        </div>
+        <div class="quotes_text">
+            <li>
+                <div>
+                    <img src="img/cover3.jpg" class="quotes_img"></div>
+                <i class="fa fa-quote-left quotes_icon"></i>
+
+                <div class="quotes_title">
+                    <p>Last rites for the Olympics</p>
+                </div>
+                <p class="quotes_name"> Andrew Mhatew</p>
+
+            </li>
+            <li>
+                <div>
+                    <img src="img/cover3.jpg" class="quotes_img"></div>
+                <i class="fa fa-quote-left quotes_icon"></i>
+
+                <div class="quotes_title">
+                    <p>Last rites for the Olympics</p>
+                </div>
+                <p class="quotes_name"> Andrew Mhatew</p>
+
+            </li>
+        </div>
+    </div>
+    <div class="news--large">
+        <div class="news_element">
+            <div class="square"></div>
+            <h2> Features</h2>
+        </div>
+        <div class="news_element">
+            <div class="picslide">
+                <img src="img/cover4.jpg" class="pic_slide_img">
+                <p class="pic_slide_text"> Doctor Note</p>
+                <h3>Covid :DO we know the real death tool?</h3>
+            </div>
+            <div class="picslide">
+                <img src="img/cover3.jpg" class="pic_slide_img">
+                <p class="pic_slide_text"> Doctor Note</p>
+                <h3>Covid :DO we know the real death tool?</h3>
+            </div>
+            <div class="picslide">
+                <img src="img/cover1.jpg" class="pic_slide_img">
+                <p class="pic_slide_text"> Doctor Note</p>
+                <h3>Covid :DO we know the real death tool?</h3>
+            </div>
+        </div>
+    </div>
+    <div class="news_vedio">
+
+        <video width="750px" height="300px" controls class="video">
+            <source src="https://www.youtube.com/watch?v=4h-l2eaNJQg" type="video/mp4">
+        </video>
+        <div class="square"></div>
+
+        <h2 class="vedio_title"><a href="#">Is putin lastest move a preloud a wider conflict ?</a></h2>
+        <p class="vedio_text">Russia deploys there armys in America and its lit out side .</p>
+    </div>
+    <div class="news--small">
+        <div class="news_img">
+            <img src="img/cover4.jpg" class="news_img-primery">
+        </div>
+        <div class="news_text">
+            <h2 class="news_title"><a href="#">`Shared resentments ' but Russia ties could be 'awkward 'for China</a>
+            </h2>
+            <p class="news_text--defualt"> Russia and china's leaders have met more than 30 times since 2013 ,but the
+                Ukraine crises will test the relationship for the statments of the crises in this day .</p>
+        </div>
+    </div>
+    <div class="footer_accordion">
+        <button class="accordion">About</button>
+        <div class="panel">
+            <ul>
+                <li><a href="#">About Us</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">Code of Ethics</a></li>
+            </ul>
+
+            <ul>
+               <li><a href="#">Terms And Condition</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">EU/EEA</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">Privecy Policy</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+        </div>
+        <button class="accordion">Connect</button>
+        <div class="panel">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Apps</a></li>
+            <li><a href="#">Channel Finder</a></li>
+            <li><a href="#">TV Shecdule</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Submit A Tip</a></li>
+        </div>
+        <button class="accordion">Our Channel</button>
+        <div class="panel">
+                <li><a href="#">Al Jazeera Arabic </a></li>
+                <li><a href="#">Al Jazeera English</a></li>
+                <li><a href="#">Al Jazeera investgeting</a></li>
+                <li><a href="#">Al Jazeera Mubasher</a></li>
+        </div>
+        <button class="accordion">Our Network</button>
+        <div class="panel">
+
+            <li><a href="#">Al Jazeera Center for Studies</a></li>
+            <li><a href="#">Al Jazeera Media Institue</a></li>
+            <li><a href="#">Learn Arabic</a></li>
+        </div>
+        <div class="footerend">
+            <div class="footer_text">
+                <i>Follow Al Jazeera</i>
+            </div>
+            <div class="footer_icon">
+                <img src="img/rss.png" class="footer_icon--small">
+                <img src="img/instagram.png" class="footer_icon--small">
+                <img src="img/youtube.png" class="footer_icon--small">
+                <img src="img/facebook.png" class="footer_icon--small">
+                <img src="img/twitter.png" class="footer_icon--small">
+            </div>
+            <div class="footer_icon--large">
+                <img src="img/07406f4e6e8f83ea61c4571fcddf8893_icon.png">
+            </div>
+            <div class="footer_text">
+                <i>© 2022 Al Jazeera Media Network </i>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-border"></div>
+        <aside class="subfot">
+            <i class="subfot-text"> Follow Al Jazeera English</i>
+            <div class="subfot-icons">
+                <img src="img/rss.png" class="subfot-icons--small">
+                <img src="img/instagram.png" class="subfot-icons--small">
+                <img src="img/youtube.png" class="subfot-icons--small">
+                <img src="img/facebook.png" class="subfot-icons--small">
+                <img src="img/twitter.png" class="subfot-icons--small">
+            </div>
+            <img src="img/07406f4e6e8f83ea61c4571fcddf8893_icon.png" class="subfot-icons--large">
+            <div class="subfot-text-copyright"><i>© 2022 Al Jazeera Media Network</i></div>
+        </aside>
+        <div class="footer_head">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Connect</a></li>
+            <li><a href="#">Our Channels</a></li>
+            <li><a href="#">Our Network</a></li>
+        </div>
+        <div class="footer_inside">
+            <div>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Code of Ethics</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">EU/EEA Regulatory</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Work for us</a></li>
+                <li><a href="#">HR Quilty </a></li>
+            </div>
+            <div>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Apps</a></li>
+                <li><a href="#">Channel Finder</a></li>
+                <li><a href="#">TV Shecdule</a></li>
+                <li><a href="#">Submit</a></li>
+            </div>
+            <div>
+                <li><a href="#">Al Jazeera Arabic</a></li>
+                <li><a href="#">Al Jazeera English</a></li>
+                <li><a href="#">Al Jazeera Investigate Unit</a></li>
+                <li><a href="#">Al Jazeera Mubasher</a></li>
+                <li><a href="#">Al Jazeera Documentry</a></li>
+                <li><a href="#">Al Jazeera Balkans</a></li>
+                <li><a href="#">AJ+</a></li>
+            </div>
+            <div>
+                <li><a href="#">Al Jazeera Center </a></li>
+                <li><a href="#">Al Jazeera Media Institue</a></li>
+                <li><a href="#">Learn Arabic</a></li>
+                <li><a href="#">Al Jazeera Center for public Libretes</a></li>
+                <li><a href="#">Al Jazeera Forum</a></li>
+                <li><a href="#">Al Jazeera Hoterl Partner</a></li>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

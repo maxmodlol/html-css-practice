@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>  
+<body>
+
+<h2>HTML Forms</h2>
+
+<form id="my-form" onsubmit="myFunction()">
+  <div>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" minlength="3"><br>
+  </div>
+  <div>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" minlength="3"><br>
+  </div>
+  <div>
+    <label for="date">Date :</label><br>
+    <input type="date" id="date" name="date" max='' ><br>
+  </div>
+  <div>
+    <label for="salary">Salary:</label><br>
+    <input type="number" id="salary" min="0"> <br>
+  </div>
+  <div>
+    <label for="email">email</label><br>
+    <input type="email" id="email" > <br>
+  </div>
+  <div>
+    <label for="color">Favorite Color</label><br>
+    <input type="color" id="color"  value="#008000"> <br>
+  </div>
+  <div>
+    <label for="image">Choose Image</label><br>
+    <input type="file" id="image" accept="image/png,image/gif,image/jpeg" ><br>
+  </div>
+  <div>
+    <p>Please select your gender</p>
+    <input type="radio" id="Male" name="gender"  value="male">
+    <label for="Male">Male</label><br>
+    <input type="radio" id="Female" name="gender" value="female">
+    <label for="Female">Female</label><br>
+  </div>
+  <div>
+    <p>Please select your courses</p>
+    <input type="checkbox" id="java"  value="Java">
+    <label for="java"> Java</label><br>
+    <input type="checkbox" id="C++" value="C++">
+    <label for="C++"> C++</label><br>
+    <input type="checkbox" id="python" value="Python">
+    <label for="python">Python</label><br>  
+    <input type="checkbox" id="PHP" value="PHP">
+    <label for="PHP">PHP</label><br>
+  </div>
+  <div>  
+    <label for="description">Description</label><br>
+
+    <textarea rows = "3"  id = "description"> </textarea><br>
+  </div>  
+  <input type="submit" value="Submit">
+</form> 
+
+
+</body>
+    <script>  
+    document.getElementById('date').max=new Date().toISOString().split("T")[0];;  
+     </script>
+     
+     <script>
+      function myFunction(){
+       var inputs = document.getElementById("my-form").elements;
+       for (i = 0; i < inputs.length; i++) {
+        if (inputs[i].nodeName === "INPUT" && inputs[i].type != "submit") {
+          alert(inputs[i].value);
+         }
+      }
+       }
+     </script>
+</html>
+
